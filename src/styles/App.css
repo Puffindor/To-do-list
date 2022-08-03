@@ -1,844 +1,946 @@
 * {
-    
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #1D262E;
+  background-color: #1d262e;
 }
 
 #root1 {
-    display: flex;
-    justify-content: center;
-  
+  display: flex;
+  justify-content: center;
 }
 
 .App {
-    display: flex;
-    justify-content: left;
+  display: flex;
+  justify-content: left;
 }
-
-
 
 .task {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 700px;
-    max-width: 700px;
-    margin-top: 15px;
-    
-    background-color: #3C4751;
-    border-style: hidden;
-    min-height: 60px;
-    max-height: 300px;
-    border-radius: 20px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    flex-wrap: wrap;
-    z-index: 10;
-}
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  min-width: 700px;
 
+  margin-top: 15px;
+
+  background-color: #3c4751;
+  border-style: hidden;
+  min-height: 60px;
+  max-height: 300px;
+  border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  flex-wrap: wrap;
+  z-index: 10;
+  transition: 0.5s;
+}
 
 .SubCheckBox {
-    width: 30px;
-    height: 30px;
-    border-radius: 10px;
-    background-color: transparent;
-    border: solid 3px #FF8B03;
-    margin-left: 6px;
-    margin-right: 30px;
-    cursor: pointer;
-    transition: 200ms;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: solid 3px #ff8b03;
+  margin-left: 6px;
+  margin-right: 30px;
+  cursor: pointer;
+  transition: 200ms;
 }
 
-.SubCheckBox_complited{
-    width: 30px;
-    height: 30px;
-    border-radius: 10px;
-    background-color: #FF8B03;
-    border: solid 3px #FF8B03;
-    margin-left: 6px;
-    margin-right: 30px;
-    cursor: pointer;
-    transition: 200ms;
+.SubCheckBox_complited {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: #ff8b03;
+  border: solid 3px #ff8b03;
+  margin-left: 6px;
+  margin-right: 30px;
+  cursor: pointer;
+  transition: 200ms;
 }
-
 
 .subTaskContent {
-    width: 500px;
+  width: 500px;
 }
 
-.subTaskPlalteText{
-    border-radius: 20px;
-    font-family: 'Roboto', sans-serif; 
-    color: rgba(255, 255, 255, 0.7);
-    margin-left: 20px;
-    margin-bottom: 10px;
+.subTaskPlalteText {
+  border-radius: 20px;
+  font-family: "Roboto", sans-serif;
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
 
-.subTaskPlalte{
-    display: flex;
-    justify-content: left;
-    align-items: flex-end;
-    width: 600px;
-    height: 80px;
-    margin-bottom: -45px;
-    background-color: #616A73;
-    z-index: 1;
-    border-radius: 10px;
-    margin-left: 66px;
-    transform: translateY(-45px);
+.subTaskPlalte {
+  display: flex;
+  justify-content: left;
+  align-items: flex-end;
+  width: 600px;
+  height: 80px;
+  margin-bottom: -45px;
+  background-color: #616a73;
+  z-index: 1;
+  border-radius: 10px;
+  margin-left: 66px;
+  transform: translateY(-45px);
 }
 
-.subTask_comlited{
-    cursor: default;
-    display: flex;
-    align-items: center;
-    width: 600px;
-    height: 40px;
-    border-radius: 10px;
-    background-color:#3C4751 ;
-    
-    margin-left: 66px;
-    margin-top: 5px;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    text-decoration: line-through;
-    transition: 200ms;
+.subTask_comlited {
+  cursor: default;
+  display: flex;
+  align-items: center;
+  width: 600px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #3c4751;
+
+  margin-left: 66px;
+  margin-top: 5px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  text-decoration: line-through;
+  transition: 200ms;
 }
 
 .subTask {
-    cursor: default;
-    display: flex;
-    align-items: center;
-    width: 600px;
-    height: 40px;
-    border-radius: 10px;
-    background-color:#3C4751 ;
-    margin-left: 66px;
-    margin-top: 5px;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    transition: 200ms;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  width: 600px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #3c4751;
+  margin-left: 66px;
+  margin-top: 5px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  transition: 200ms;
 }
 
-.b{
-    display: flex;
-    justify-content: right;
-    flex-direction: column;
+.b {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 10;
 }
 
-.subTaskInputContainer{
-    display: flex;
-    align-items: center;
-    width: 560px;
-    height: 30px;
-    border-radius: 10px;
-    background-color: transparent;
-    border: solid 3px #FF8B03;
-margin-top: 5px;
-margin-bottom: 5px;
-padding-right: 8px;
+.subTaskInputContainer {
+  display: flex;
+  align-items: center;
+  width: 560px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: solid 4px #ff8b03;
+  margin-left: 60px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-right: 8px;
 }
 
-.subTaskInput{
-    width: 560px;
-    height: 30px;
-    border-radius: 10px;
-    background-color: transparent;
-    border-style: hidden;
-    outline: none;
-    margin-left: 15px;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+.subTaskInput {
+  width: 500px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: transparent;
+  border-style: hidden;
+  outline: none;
+  margin-left: 15px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+
+.icon_container3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+
+  border-radius: 10px;
+  margin-left: 9px;
+  margin-right: 9px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+
+.icon_container3:hover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #a2a2ac;
+  border-radius: 10px;
+  margin-left: 9px;
+  margin-right: 9px;
+  margin-bottom: 10px;
+  transition: 0.3s;
 }
 
 .checkbox {
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    border-radius: 10px;
-    border: solid 3px #FF8B03;
-
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: solid 3px #ff8b03;
 }
 
 .checkboxDone {
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    border-radius: 10px;
-    border: solid 4px #FF8B03;
-    background-color: #FF8B03;
-    margin-left: 15px;
-
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: solid 4px #ff8b03;
+  background-color: #ff8b03;
 }
 
 .task-text {
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    background-color: transparent;
-    border-style: hidden;
-    color: white;
-    outline: none;
-
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  background-color: transparent;
+  border-style: hidden;
+  color: white;
+  outline: none;
 }
 
 .SeporationLine {
-    height: 2px;
-    width: 44px;
-    transform: rotate(90deg);
-    color: #A2A2AC;
+  height: 2px;
+  width: 44px;
+  transform: rotate(90deg);
+  color: #a2a2ac;
 }
 
 .taskContent {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    min-width: 586px;
-    margin-bottom: 10px;
-    min-height: 40px;
-    color: white;
-    background-color: #616A73;
-    border-radius: 10px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  min-width: 586px;
+  margin-bottom: 10px;
+  min-height: 40px;
+  color: white;
+  background-color: #616a73;
+  border-radius: 10px;
 }
 
-.CheckboxContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-background-color: #616A73;
-border-radius: 10px;
-margin-left: 9px;
-margin-right: 9px;
-margin-bottom: 10px;
+.CheckboxContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #616a73;
+  border-radius: 10px;
+  margin-left: 9px;
+  margin-right: 9px;
+  margin-bottom: 10px;
 }
 
 .menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-width: 40px;
-height: 40px;
-background-color:#616A73 ;
-border-radius:10px ;
-margin-left: 7px;
-margin-right: 10px;
-margin-bottom: 10px;
-transition: 1s;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #616a73;
+  border-radius: 10px;
+  margin-left: 9px;
+  margin-right: 9px;
+  margin-bottom: 10px;
+  transition: 0.4s;
 }
 
 .menu_active {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-width: 130px;
-height: 40px;
-background-color:#616A73 ;
-border-radius:10px ;
-margin-left: -83px;
-margin-right: 10px;
-transform: translateX(90px);
-transition: 1s;
-margin-bottom: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 145px;
+  height: 40px;
+  background-color: #616a73;
+  border-radius: 10px;
+  margin-left: 9px;
+  margin-right: 10px;
+
+  transition: 0.4s;
+  margin-bottom: 10px;
+  z-index: 1;
 }
 
-.textConstainer{
-    display: flex;
-    align-items: center;
-    min-height: 30px;
-    max-height: 300px;
-    margin-left: 15px;
-    flex-wrap: wrap;
-    max-width: 586px;
+.textConstainer {
+  display: flex;
+  align-items: center;
+  min-height: 30px;
+  max-height: 300px;
+  margin-left: 15px;
+  flex-wrap: wrap;
+  max-width: 586px;
 }
 
-.icons{
-    width: 20px;
-    height: 20px;
-    opacity: 0;
-transition: 0.5s;
+.icons {
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  transition: 0.5s;
 }
 
-.icons_active{
-    width: 20px;
-    height: 20px;
-    opacity: 1;
-    transition: 0.5s;
-
+.icons_active {
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+  transition: 0.5s;
 }
 
 .taskContentDone {
-    display: flex;
-    justify-content: left;
-    min-width: 500px;
-    max-width: 500px;
-    color: white;
-    text-decoration: line-through;
+  display: flex;
+  justify-content: left;
+  min-width: 500px;
+  max-width: 500px;
+  color: white;
+  text-decoration: line-through;
 }
 
 .IconDelete {
-    opacity: 1;
-    z-index: 10;
+  opacity: 1;
+  z-index: 10;
 }
 
 .Delete {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 15px;
-    margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+  margin-right: 15px;
 }
-
-
 
 .IconEdit {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-
-.Header { 
-    margin-top: 20px;
-    color: white;
-    font-family: 'Roboto';
-    font-size: 30px;
-    margin-bottom: 15px;
-    text-align: center;
+.Header {
+  margin-top: 20px;
+  color: white;
+  font-family: "Roboto";
+  font-size: 30px;
+  margin-bottom: 15px;
 }
 
 .inputBar {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    margin-top: 50px;
-    margin-bottom: 40px;
-    width: 700px;
-    height: 60px;
-    border-radius: 20px;
-   
-    border: #FF8B03 solid 4px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 40px;
+  width: 700px;
+  height: 60px;
+  border-radius: 20px;
 
+  border: #ff8b03 solid 4px;
 }
 
 .input {
-    margin-left: 15px;
-    width: 600px;
-    background-color: transparent;
-    border-style: hidden;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    color: white;
-    outline: none;
-    
+  margin-left: 15px;
+  width: 600px;
+  background-color: transparent;
+  border-style: hidden;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: white;
+  outline: none;
 }
 
 .inputButton {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    margin-left: 15px;
-    border-radius: 10px;
-    width:30px;
-    height:30px;
-    background-color: #FF8B03;
-    border-style: hidden ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 15px;
+  border-radius: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #ff8b03;
+  border-style: hidden;
 }
 
 .inputButton::after {
-   position: absolute;
-    content: '';
-    width:20px ;
-    height:4px ;
-    background-color: #1D262E;
-    border-radius: 10px;
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 4px;
+  background-color: #1d262e;
+  border-radius: 10px;
 }
 .inputButton::before {
-    position: absolute;
-    content: '';
-    width:20px ;
-    height:4px ;
-    background-color: #1D262E;
-    border-radius: 10px;
-    transform: rotate(90deg);
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 4px;
+  background-color: #1d262e;
+  border-radius: 10px;
+  transform: rotate(90deg);
 }
 
 .Empty {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-font-family: 'Roboto', sans-serif;
-    font-size: 30px;
-    color: white;
-margin-top: 15px;
-margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  color: white;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 .CustomInput {
-    width:578px;
-    height:40px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    border-style: hidden ;
-    background-color: transparent;
-    color: white;
-    outline: none;
-    /* margin-left: 15px; */
+  width: 578px;
+  height: 40px;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  border-style: hidden;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  /* margin-left: 15px; */
 }
 
 .CustomInputContainer {
-    align-items: center;
-    border: #FF8B03 solid 4px;
-    display: flex;
-    justify-content: space-between;
-    width:670px;
-    height:40px;
-    border-radius: 10px;
-    background-color: transparent;
-    margin-left: 15px;
-    padding: 15px;
+  margin-top: 10px;
+  align-items: center;
+  border: #ff8b03 solid 4px;
+  display: flex;
+  justify-content: space-between;
+  width: 670px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: transparent;
+  margin-left: 15px;
+  padding: 15px;
 }
 
-
-
-.Wrapper{
-    display: flex;
-    justify-content: space-between;
+.Wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
-
-.TaskGroupHr{
-   margin-right: 20px;
-   margin-top: 20px;
-   margin-bottom: 20px;
+.icon_container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
-.GroupHr{
-    display: flex;
-margin-top: 10px;
-margin-bottom: 10px;
-min-width: 58px;
-max-width: 100px;
-transform: rotate(90deg);
+.icon_container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  margin-left: 2px;
+  border-radius: 10px;
+  transform: rotate(-90deg);
+  transition: 0.3s;
 }
 
-.TaskGroup{
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    margin: 15px;
-    width: 441px;
-    height: 80px;
-    background-color: #3C4E5E;
-    border-radius: 10px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    transition: 300ms;
-    border: transparent 4px solid;
+.icon_container2:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2px;
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: #a2a2ac;
+  transform: rotate(-90deg);
+  transition: 0.3s;
 }
 
-.GroupButton{
-    width: 50px;
-    height: 50px;
-    border-radius: 20px;
-    background-color: #FF8B03;
-    margin-top: 15px;
+.icon_container1:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: #a2a2ac;
+  transition: 0.3s;
+}
+
+.TaskGroupHr {
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.icon_container_group_input:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #616a73;
+  border-radius: 10px;
+}
+.icon_container_group_input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+
+  border-radius: 10px;
+}
+
+.group_input {
+  background-color: transparent;
+  border-style: hidden;
+  outline: none;
+  width: 120px;
+  margin-left: 15px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+
+.group_input_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 55px;
+  border-radius: 20px;
+  border: 4px solid #ff8b03;
+  margin-left: 10px;
+}
+
+.GroupHr {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-width: 58px;
+  max-width: 100px;
+  transform: rotate(90deg);
+}
+
+.TaskGroup {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 15px;
+  width: 400px;
+  height: 80px;
+  background-color: #3c4e5e;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  transition: 300ms;
+  border: transparent 4px solid;
+}
+
+.GroupButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 20px;
+  background-color: #ff8b03;
+  margin-top: 15px;
 }
 
 .GroupHeader {
-    margin: 15px;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 40px;
+  margin: 15px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
 }
 
-    .item-enter {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  .item-enter-active {
-    transform: scale(1);
-    opacity: 1;
-    transition:500ms;
-  }
-  .item-exit {
-    opacity: 1;
-    transform: scale(1);
-  }
-  .item-exit-active {
-    transform: scale(0.8);
-    opacity: 0;
-    transition:500ms;
-  }
+.item-enter {
+  transform: scale(0.8);
+  opacity: 0;
+}
+.item-enter-active {
+  transform: scale(1);
+  opacity: 1;
+  transition: 500ms;
+}
+.item-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+.item-exit-active {
+  transform: scale(0.8);
+  opacity: 0;
+  transition: 500ms;
+}
 
+.task_coplited11111111111111111111111111111111111111111 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  
-  .a{
-display: flex;
-justify-content: right;
-  }
+.a {
+  display: flex;
+  justify-content: right;
+}
 
 .ProgressBar {
-    width: 60px;
-    height: 60px;
+  width: 60px;
+  height: 60px;
 
-transform-origin: center;
-transform: rotate(-90deg);
-
+  transform-origin: center;
+  transform: rotate(-90deg);
 }
-.TaskGroupString{
-font-size: 30px;
-font-family: 'Roboto', sans-serif;
-color: white;
-
+.TaskGroupString {
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  color: white;
 }
 
 ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.ArrowContainer{
-    display: flex;
-    justify-content:space-evenly;
-    align-items: center;
-    flex-direction: column;
-    width: 55px;
-    height:55px;
-    background-color: #616A73;
-    border-radius: 10px;
-    margin-left: 15px;
-    transition: 0.3s;
+.ArrowContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 55px;
+  height: 55px;
+  background-color: #616a73;
+  border-radius: 10px;
+  margin-left: 15px;
+  transition: 0.3s;
 }
-
-
 
 .TaskGroup_selected {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-right: 5px;
-    margin-left: 5px;
-    width: 461px;
-    height: 80px;
-    background-color: #3C4E5E;
-    border-radius: 10px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    transition: 300ms;
-    border: #FF8B03 4px solid;
-    padding: 10px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 5px;
+  margin-left: 5px;
+  width: 430px;
+  height: 80px;
+  background-color: #3c4e5e;
+  border-radius: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  transition: 300ms;
+  border: #ff8b03 4px solid;
+  padding: 10px;
 }
 
-.TaskGroupString2{
-    display: flex;
-    justify-content: center;
-    min-width: 200px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 30px;
-    color:white
+.TaskGroupString2 {
+  display: flex;
+  justify-content: center;
+  min-width: 200px;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  color: white;
 }
 .GroupInputContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    height: 60px;
-    border-radius:20px ;
-    background-color: #3C4E5E;
-    margin-bottom: 100px;
-    margin-left: 30px;
-    margin-right: 20px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 30px;
-    color: white;
-    transition: 0.5s;
+  padding: 5px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 400px;
+  height: 60px;
+  border-radius: 20px;
+  background-color: #3c4e5e;
+
+  margin-left: 30px;
+  margin-right: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  color: white;
+  transition: 0.5s;
+  z-index: 10;
 }
 
-.GroupInputContainer_active{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 400px;
-    height: 140px;
-    border-radius:20px ;
-    background-color: #3C4E5E;
-    margin-bottom: 100px;
-    margin-left: 30px;
-    margin-right: 20px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 30px;
-    color: white;
-    transition: 0.5s;
+.GroupInputContainer_active {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 140px;
+  border-radius: 20px;
+  background-color: #3c4e5e;
+  margin-bottom: 100px;
+  margin-left: 30px;
+  margin-right: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  color: white;
+  transition: 0.5s;
 }
 
-.CloseListButton{
-    padding: 5px;
-    width: 40px;
-    height: 40px;
-    background-color:transparent;
-    border-radius: 10px;
-    transition:400ms;
+.CloseListButton {
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 10px;
+  transition: 400ms;
 }
 
-.CloseListButton:hover{
-    padding: 5px;
-    width: 40px;
-    height: 40px;
-    background-color:#A2A2AC;
-    border-radius: 10px;
-    transition:400ms;
+.CloseListButton:hover {
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: #a2a2ac;
+  border-radius: 10px;
+  transition: 400ms;
 }
-
 
 .AddNewButton {
-    padding: 5px;
-    width: 40px;
-    height: 40px;
-    background-color:transparent;
-    border-radius: 10px;
-transition: 400ms;
-margin-left: 100px;
-margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 10px;
+  transition: 400ms;
+  margin-left: 160px;
+  margin-right: 50px;
 }
 
 .AddNewButton:hover {
-    padding: 5px;
-    width: 40px;
-    height: 40px;
-    background-color:#A2A2AC;
-    border-radius: 10px;
-    transition:400ms;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  background-color: #a2a2ac;
+  border-radius: 10px;
+  transition: 400ms;
 }
 
 .InputContainer {
-    display: flex;
-    align-items: center;
-    width:370px ;
-    height: 60px;
-    border-radius:20px ;
-    border: solid 4px #FF8B03;
-    color: transparent;
-    margin-bottom: 10px;
-    
-    animation-name: anim;
-    animation-fill-mode: backwards;
-    animation-duration: 0.3s;
-    animation-delay: 0.3s;
-    transform: scale(1);
-    
+  display: flex;
+  align-items: center;
+  width: 370px;
+  height: 60px;
+  border-radius: 20px;
+  border: solid 4px #ff8b03;
+  color: transparent;
+  margin-bottom: 10px;
+  /* animation-name: anim;
+  animation-fill-mode: backwards;
+  animation-duration: 0.3s;
+  animation-delay: 0.3s; */
+  transform: translateY(-45px);
+
+  z-index: 1;
 }
 .InputContainer_active {
-    display: flex;
-    align-items: center;
-    width:370px ;
-    height: 60px;
-    border-radius:20px ;
-    border: solid 4px #FF8B03;
-    color: transparent;
-    margin-bottom: 10px;
-    animation-name: anim;
-    animation-fill-mode: forwards;
-animation-duration: 0.3s;
-animation-delay: 0.3s;
-transform: scale(0);
+  display: flex;
+  align-items: center;
+  width: 370px;
+  height: 60px;
+  border-radius: 20px;
+  border: solid 4px #ff8b03;
+  color: transparent;
+  margin-bottom: 10px;
+  animation-name: anim;
+  animation-fill-mode: forwards;
+  animation-duration: 0.3s;
+  animation-delay: 0.3s;
+  transform: scale(0);
 }
-
 
 @keyframes anim {
-    from {
-        transform: scale(0);
-        
-    }
-    to {
-        transform: scale(1);
-        }
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
-
 
 .GroupInput {
-    outline: none;
-    width: 200px;
-    height: 40px;
-    background-color: transparent;
-    border-style: hidden ;
-    margin-right: 20px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    margin-left: 15px;
-    color:white;
+  outline: none;
+  width: 200px;
+  height: 40px;
+  background-color: transparent;
+  border-style: hidden;
+  margin-right: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  margin-left: 15px;
+  color: white;
 }
-.IconContainer:hover{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-    width: 40px;
-    height: 40px;
-    background-color:#A2A2AC ;
-border-radius: 10px;
-transition: 400ms;
+.IconContainer:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #a2a2ac;
+  border-radius: 10px;
+  transition: 400ms;
 }
-.IconContainer{
-    margin-left: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-     width: 40px;
-     height: 40px;
-     background-color:transparent ;
-    border-radius: 10px;
-    transition: 400ms;
-   
- }
+.IconContainer {
+  margin-left: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 10px;
+  transition: 400ms;
+}
 
 .add {
-    fill: #FF8B03;
+  fill: #ff8b03;
 }
 
-.UpperPlate{
- 
-    
-    width: 100%;
-    height: 60px;
-    background-color:#3C4E5E ;
-    margin-bottom: 50px;
+.UpperPlate {
+  width: 100%;
+  height: 60px;
+  background-color: #3c4e5e;
+  margin-bottom: 50px;
 }
-
-
-
-
-
 
 .icoE-enter {
-    
-    opacity: 0;
-    transition: 600ms;
-    
-      }
+  opacity: 0;
+  transition: 600ms;
+}
 .icoE-enter-active {
-   opacity: 1;
-   transition: 600ms;
-   
+  opacity: 1;
+  transition: 600ms;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 .icoE-exit {
-        opacity: 1;
-        transition: 200ms;
-  }
+  opacity: 1;
+  transition: 200ms;
+}
 .icoE-exit-active {
-    opacity: 0;
-    display: none;
-    transition: 200ms;
-  }
+  opacity: 0;
+  display: none;
+  transition: 200ms;
+}
 
+.ico-enter {
+  transform: scale(0);
+  transition: 200ms;
+  animation-delay: 10s;
+}
+.ico-enter-active {
+  transform: scale(1);
+  opacity: 1;
+  transition: 200ms;
+  animation-delay: 10s;
+}
 
-  .iconContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 35px;
-    height: 35px;
-    background-color: transparent;
-    border-radius: 10px;
-    
-    transition: 200ms;
-  }
-  .iconContainer:hover{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 35px;
-    height: 35px;
-    background-color: #A2A2AC;
-    border-radius: 10px;
-    
-    transition: 200ms;
-  }
+.ico-exit {
+  transform: scale(1);
+  opacity: 1;
+  transition: 200ms;
+}
+.ico-exit-active {
+  transform: scale(0);
+  opacity: 0;
+  display: none;
+  transition: 200ms;
+}
 
-  .GroupPlate_closed{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15px;
-    margin-left: 42px;
-    margin-right: 32px;
-    width: 90px;
-    height: 90px;
-    background-color:#3C4E5E ;
-    border-radius: 10px;
-  }
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: 35px;
+  height: 35px;
+  background-color: transparent;
+  border-radius: 10px;
 
-  .GroupPlateInput_closed {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 55px;
-    margin-right: 0px;
-    margin-bottom: 6px;
-    width: 72px;
-    height:60px ;
-    border-radius: 10px;
-    background-color: #3C4E5E;
-  }
+  transition: 200ms;
+}
+.iconContainer:hover {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background-color: #a2a2ac;
+  border-radius: 10px;
 
-  .List_hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: transparent;
-    width:40px;
-    height:40px;
-    border-radius: 10px;
-    transition: 300ms;
-  }
-  .List_hover:hover {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #A2A2AC;
-    width:40px;
-    height:40px;
-    border-radius: 10px;
-    transition: 300ms;
-  }
+  transition: 200ms;
+}
 
+.GroupPlate_closed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  margin-left: 42px;
+  margin-right: 32px;
+  width: 90px;
+  height: 90px;
+  background-color: #3c4e5e;
+  border-radius: 10px;
+}
 
-  .GroupPlate_closed_selected{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 55px;
-    margin-right: 0px;
-    margin-bottom: 6px;
-    width: 100px;
-    height:100px ;
-    border-radius: 10px;
-    background-color:#FF8B03;
-  }
+.GroupPlateInput_closed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 55px;
+  margin-right: 0px;
+  margin-bottom: 6px;
+  width: 72px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #3c4e5e;
+}
+
+.List_hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  transition: 300ms;
+}
+.List_hover:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #a2a2ac;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  transition: 300ms;
+}
+
+.GroupPlate_closed_selected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 55px;
+  margin-right: 0px;
+  margin-bottom: 6px;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: #ff8b03;
+}
